@@ -164,34 +164,74 @@
   <section id="e85">
     <h2>Conversion E85</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Économie</h3>
-        <p>Réduction significative du coût au kilomètre grâce au bioéthanol E85.</p>
-      </div>
-      <div class="card">
-        <h3>Performance</h3>
-        <p>Indice d'octane élevé permettant une combustion plus efficace et plus de couple.</p>
-      </div>
-      <div class="card">
-        <h3>Fiabilité</h3>
-        <p>Cartographies adaptées avec démarrages à froid et protections moteur intégrées.</p>
-      </div>
+      <div class="card"><h3>Économie</h3><p>Réduction significative du coût au kilomètre.</p></div>
+      <div class="card"><h3>Performance</h3><p>Meilleur rendement grâce à l’indice d’octane élevé.</p></div>
+      <div class="card"><h3>Fiabilité</h3><p>Cartographie sur mesure et protections moteur.</p></div>
     </div>
+    <canvas id="dyno" style="margin-top:60px"></canvas>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    new Chart(document.getElementById('dyno'), {
+      type: 'line',
+      data: {
+        labels: ['2000','3000','4000','5000','6000'],
+        datasets: [
+          { label: 'Avant', data: [120,140,155,150,140], borderWidth: 3 },
+          { label: 'Après', data: [150,180,210,205,195], borderWidth: 3 }
+        ]
+      }
+    });
+  </script>
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>
-      📍 Atelier XP PERFORMANCE <br />
-      📞 Téléphone : 06 20 75 02 77 <br />
-      ✉️ Email : x.payet@xpperformance.fr<br /><br />
-      N'hésitez pas à me contacter pour une étude personnalisée de votre véhicule.
-    </p>
+    <form action="https://formsubmit.co/x.payet@xpperformance.fr" method="POST" style="max-width:600px">
+      <input type="text" name="name" placeholder="Nom" required style="width:100%;padding:12px;margin-bottom:15px" />
+      <input type="email" name="email" placeholder="Email" required style="width:100%;padding:12px;margin-bottom:15px" />
+      <textarea name="message" placeholder="Votre demande" rows="5" required style="width:100%;padding:12px;margin-bottom:15px"></textarea>
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_subject" value="Nouveau message XP Performance" />
+      <button type="submit" style="background:#e10600;color:#fff;border:none;padding:15px 30px;font-weight:600">Envoyer</button>
+    </form>
   </section>
 
   <footer>
-    © 2026 XP Performance – Reprogrammation moteur haute performance
+    © 2026 XP PERFORMANCE – Reprogrammation moteur haute performance
   </footer>
 
 </body>
 </html>
+
+<form action="https://formsubmit.co/x.payet@xpperformance.fr" method="POST">
+
+  <!-- Nom -->
+  <input type="text" name="name" placeholder="Nom" required>
+
+  <!-- Email -->
+  <input type="email" name="email" placeholder="Email" required>
+
+  <!-- Message -->
+  <textarea name="message" placeholder="Votre demande" required></textarea>
+
+  <!-- 🔒 Anti-spam invisible -->
+  <input type="text" name="_honey" style="display:none">
+
+  <!-- ❌ Désactive le captcha -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- 📩 Objet de l’email reçu -->
+  <input type="hidden" name="_subject" value="Nouveau message XP Performance">
+
+  <!-- 🔁 REDIRECTION APRÈS ENVOI -->
+  <input
+    type="hidden"
+    name="_next"
+    value="https://xpperformance.fr/merci.html"
+  >
+
+  <!-- Bouton -->
+  <button type="submit">Envoyer</button>
+
+</form>
+
