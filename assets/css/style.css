@@ -290,11 +290,11 @@ body {
 @media (max-width: 900px) {
   .header {
     padding: 16px 20px;
-    justify-content: center; /* logo bien centré sur mobile */
+    justify-content: center; 
   }
 
   .header .logo {
-    height: 60px; /* logo visible mais pas envahissant */
+    height: 60px;
   }
 }
 
