@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XP Performance – Reprogrammation moteur</title>
 
   <link rel="stylesheet" href="assets/css/style.css">
@@ -11,109 +11,107 @@
 
 <body>
 
-<header>
-  <img src="logo-xp.png" alt="XP PERFORMANCE logo" />
+<header class="header">
+  <img src="assets/images/logo-xp.png" alt="XP Performance">
 </header>
 
 <section class="hero">
   <h1>XP PERFORMANCE</h1>
-  <p>Spécialiste de la reprogrammation moteur sur mesure. Performance, fiabilité et passion automobile réunies pour exploiter tout le potentiel de votre véhicule.</p>
+  <p>Reprogrammation moteur sur mesure. Performance, fiabilité et passion automobile.</p>
 </section>
 
-<section id="stages">
+<section class="services">
   <h2>Stages moteur</h2>
+
   <div class="cards">
     <div class="card">
       <h3>Stage 1</h3>
-      <p>Optimisation électronique sans modification mécanique. Gain de puissance et de couple tout en respectant les tolérances constructeur.</p>
+      <p>Optimisation électronique sans modification mécanique.</p>
     </div>
+
     <div class="card">
       <h3>Stage 2</h3>
-      <p>Reprogrammation avancée avec pièces performance (admission, échappement). Sensations accrues et rendement optimisé.</p>
+      <p>Reprogrammation avancée avec pièces performance.</p>
     </div>
+
     <div class="card">
       <h3>Stage 3</h3>
-      <p>Préparation complète sur projet spécifique : turbo, injecteurs, gestion moteur sur mesure.</p>
+      <p>Préparation complète sur projet spécifique.</p>
     </div>
   </div>
 </section>
 
-<section id="e85">
+<section class="services">
   <h2>Conversion E85</h2>
+
   <div class="cards">
     <div class="card">
       <h3>Économie</h3>
-      <p>Réduction significative du coût au kilomètre.</p>
+      <p>Réduction importante du coût au kilomètre.</p>
     </div>
+
     <div class="card">
       <h3>Performance</h3>
-      <p>Meilleur rendement grâce à l’indice d’octane élevé.</p>
+      <p>Indice d’octane élevé = meilleur rendement.</p>
     </div>
+
     <div class="card">
       <h3>Fiabilité</h3>
-      <p>Cartographie sur mesure et protections moteur.</p>
+      <p>Cartographie sécurisée et protections moteur.</p>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact">
   <h2>Contact</h2>
 
-  <form class="contact-form" action="https://formsubmit.co/TON_EMAIL_ICI" method="POST">
-    <input type="hidden" name="_next" value="https://xpperformance.fr/merci.html">
+  <form
+    class="contact-form"
+    action="https://formsubmit.co/TON_EMAIL_ICI"
+    method="POST"
+  >
     <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://xpperformance.fr/merci.html">
 
     <div class="form-grid">
-      <div class="field">
-        <input type="text" name="name" placeholder="Nom / Prénom" required>
-      </div>
-
-      <div class="field">
-        <input type="email" name="email" placeholder="Adresse email" required>
-      </div>
-
-      <div class="field">
-        <input type="tel" name="phone" placeholder="Numéro de téléphone">
-      </div>
-
-      <div class="field full">
-        <input type="text" name="vehicle" placeholder="Véhicule (marque / modèle)">
-      </div>
-
-      <div class="field full">
-        <textarea name="message" rows="5" placeholder="Votre demande..." required></textarea>
-      </div>
+      <input type="text" name="name" placeholder="Nom / Prénom" required>
+      <input type="email" name="email" placeholder="Adresse email" required>
+      <input type="tel" name="phone" placeholder="Téléphone">
+      <input type="text" name="vehicle" placeholder="Véhicule (marque / modèle)" class="full">
+      <textarea name="message" rows="5" placeholder="Votre demande..." class="full" required></textarea>
     </div>
 
-    <button type="submit" class="btn-send">ENVOYER</button>
+    <button type="submit" class="btn">Envoyer</button>
   </form>
 </section>
 
-<section class="location" id="location">
-  <h2>📍 NOUS TROUVER</h2>
+<section class="location">
+  <h2>📍 Nous trouver</h2>
+
   <p class="address">
     224 rue Gombette<br>
     01330 Ambérieux-en-Dombes
   </p>
 
-  <div class="map-container">
+  <div class="map">
     <iframe
       src="https://www.google.com/maps?q=224%20rue%20Gombette%2001330%20Amb%C3%A9rieux-en-Dombes&z=16&output=embed"
       loading="lazy">
     </iframe>
 
-    <div class="map-marker">
-      <a
-        href="https://www.google.com/maps/dir/?api=1&destination=224+rue+Gombette+01330+Amb%C3%A9rieux-en-Dombes"
-        target="_blank">
-        <img src="assets/images/logo-xp-marker.png" alt="XP Performance">
-      </a>
-    </div>
+    <a
+      href="https://www.google.com/maps/dir/?api=1&destination=224+rue+Gombette+01330+Amb%C3%A9rieux-en-Dombes"
+      target="_blank"
+      class="map-marker"
+      aria-label="Ouvrir dans Google Maps"
+    >
+      <img src="assets/images/logo-xp-marker.png" alt="XP Performance">
+    </a>
   </div>
 </section>
 
-<footer>
-  © 2026 XP PERFORMANCE – Reprogrammation moteur haute performance
+<footer class="footer">
+  © 2026 XP PERFORMANCE – Reprogrammation moteur
 </footer>
 
 </body>
