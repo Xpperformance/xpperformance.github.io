@@ -130,15 +130,10 @@
   </style>
 </head>
 <body>
-
-  <header>
-    <img src="logo-xp.png" alt="XP PERFORMANCE logo" />
-    <nav>
-      <a href="#stages">Stages</a>
-      <a href="#e85">E85</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  
+<header>
+  <img src="logo-xp.png" alt="XP PERFORMANCE logo" />
+</header>
 
   <section class="hero">
     <h1>XP PERFORMANCE</h1>
@@ -179,6 +174,41 @@
       <p>Cartographie sur mesure et protections moteur.</p>
     </div>
   </div>
+</section>
+
+  <section class="contact">
+  <h2>Contact</h2>
+
+  <form action="https://formsubmit.co/TON_EMAIL_ICI" method="POST">
+
+    <!-- Options FormSubmit -->
+    <input type="hidden" name="_next" value="https://xpperformance.fr/merci.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="cards">
+
+      <div class="card">
+        <input type="text" name="name" placeholder="Nom / Prénom" required>
+      </div>
+
+      <div class="card">
+        <input type="email" name="email" placeholder="Adresse email" required>
+      </div>
+
+      <div class="card">
+        <input type="text" name="vehicle" placeholder="Véhicule (marque / modèle)">
+      </div>
+
+      <div class="card">
+        <textarea name="message" rows="5" placeholder="Votre demande..." required></textarea>
+      </div>
+
+    </div>
+
+    <br>
+
+    <button type="submit" class="btn-contact">Envoyer</button>
+  </form>
 </section>
 
 <section class="location" id="contact">
