@@ -1,162 +1,42 @@
-<link rel="stylesheet" href="assets/css/style.css">
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XP Performance – Reprogrammation moteur</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --red: #e10600;
-      --black: #0e0e0e;
-      --gray: #1c1c1c;
-      --white: #ffffff;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(180deg, var(--black), var(--gray));
-      color: var(--white);
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 60px;
-      background: #000;
-      border-bottom: 2px solid var(--red);
-    }
-
-    header img {
-      height: 70px;
-    }
-
-    nav a {
-      color: var(--white);
-      margin-left: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      position: relative;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -6px;
-      left: 0;
-      background: var(--red);
-      transition: 0.3s;
-    }
-
-    nav a:hover::after { width: 100%; }
-
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-      background: radial-gradient(circle at top, #2a0000, #000);
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      color: var(--red);
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 30px auto;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    section {
-      padding: 100px 60px;
-    }
-
-    section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      color: var(--red);
-      text-transform: uppercase;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: #0b0b0b;
-      border: 1px solid #222;
-      padding: 30px;
-      border-radius: 16px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 25px rgba(225,6,0,0.35);
-    }
-
-    .card h3 {
-      margin-bottom: 15px;
-      color: var(--white);
-    }
-
-    .contact {
-      background: linear-gradient(180deg, #000, #120000);
-    }
-
-    .contact p {
-      max-width: 600px;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #000;
-      border-top: 2px solid var(--red);
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
+
 <body>
-  
+
 <header>
   <img src="logo-xp.png" alt="XP PERFORMANCE logo" />
 </header>
 
-  <section class="hero">
-    <h1>XP PERFORMANCE</h1>
-    <p>Spécialiste de la reprogrammation moteur sur mesure. Performance, fiabilité et passion automobile réunies pour exploiter tout le potentiel de votre véhicule.</p>
-  </section>
+<section class="hero">
+  <h1>XP PERFORMANCE</h1>
+  <p>Spécialiste de la reprogrammation moteur sur mesure. Performance, fiabilité et passion automobile réunies pour exploiter tout le potentiel de votre véhicule.</p>
+</section>
 
-  <section id="stages">
-    <h2>Stages moteur</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Stage 1</h3>
-        <p>Optimisation électronique sans modification mécanique. Gain de puissance et de couple tout en respectant les tolérances constructeur.</p>
-      </div>
-      <div class="card">
-        <h3>Stage 2</h3>
-        <p>Reprogrammation avancée avec pièces performance (admission, échappement). Sensations accrues et rendement optimisé.</p>
-      </div>
-      <div class="card">
-        <h3>Stage 3</h3>
-        <p>Préparation complète sur projet spécifique : turbo, injecteurs, gestion moteur sur mesure.</p>
-      </div>
+<section id="stages">
+  <h2>Stages moteur</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Stage 1</h3>
+      <p>Optimisation électronique sans modification mécanique. Gain de puissance et de couple tout en respectant les tolérances constructeur.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>Stage 2</h3>
+      <p>Reprogrammation avancée avec pièces performance (admission, échappement). Sensations accrues et rendement optimisé.</p>
+    </div>
+    <div class="card">
+      <h3>Stage 3</h3>
+      <p>Préparation complète sur projet spécifique : turbo, injecteurs, gestion moteur sur mesure.</p>
+    </div>
+  </div>
+</section>
 
 <section id="e85">
   <h2>Conversion E85</h2>
@@ -176,124 +56,41 @@
   </div>
 </section>
 
-<section class="contact">
-  <h2>Contact</h2>
-
-  <form action="https://formsubmit.co/TON_EMAIL_ICI" method="POST">
-
-    <!-- Options FormSubmit -->
-    <input type="hidden" name="_next" value="https://xpperformance.fr/merci.html">
-    <input type="hidden" name="_captcha" value="false">
-
-    <div class="cards">
-
-      <div class="card">
-        <input type="text" name="name" placeholder="Nom / Prénom" required>
-      </div>
-
-      <div class="card">
-        <input type="email" name="email" placeholder="Adresse email" required>
-      </div>
-
-      <!-- 🔥 NOUVEAU : Téléphone -->
-      <div class="card">
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Numéro de téléphone"
-          inputmode="tel"
-        >
-      </div>
-
-      <div class="card">
-        <input type="text" name="vehicle" placeholder="Véhicule (marque / modèle)">
-      </div>
-
-      <div class="card">
-        <textarea name="message" rows="5" placeholder="Votre demande..." required></textarea>
-      </div>
-
-    </div>
-
-    <br>
-
-    <button type="submit" class="btn-contact">Envoyer</button>
-  </form>
-</section>
-
 <section class="contact" id="contact">
   <h2>Contact</h2>
 
-  <form
-    class="contact-form"
-    action="https://formsubmit.co/TON_EMAIL_ICI"
-    method="POST"
-  >
-
-    <!-- Options FormSubmit -->
+  <form class="contact-form" action="https://formsubmit.co/TON_EMAIL_ICI" method="POST">
     <input type="hidden" name="_next" value="https://xpperformance.fr/merci.html">
     <input type="hidden" name="_captcha" value="false">
 
     <div class="form-grid">
-
       <div class="field">
-        <input
-          type="text"
-          name="name"
-          placeholder="Nom / Prénom"
-          required
-        >
+        <input type="text" name="name" placeholder="Nom / Prénom" required>
       </div>
 
       <div class="field">
-        <input
-          type="email"
-          name="email"
-          placeholder="Adresse email"
-          required
-        >
+        <input type="email" name="email" placeholder="Adresse email" required>
       </div>
 
-      <!-- 📞 Téléphone -->
       <div class="field">
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Numéro de téléphone"
-          inputmode="tel"
-        >
+        <input type="tel" name="phone" placeholder="Numéro de téléphone">
       </div>
 
       <div class="field full">
-        <input
-          type="text"
-          name="vehicle"
-          placeholder="Véhicule (marque / modèle)"
-        >
+        <input type="text" name="vehicle" placeholder="Véhicule (marque / modèle)">
       </div>
 
       <div class="field full">
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Votre demande..."
-          required
-        ></textarea>
+        <textarea name="message" rows="5" placeholder="Votre demande..." required></textarea>
       </div>
-
     </div>
 
-    <button type="submit" class="btn-send">
-      ENVOYER
-    </button>
-
+    <button type="submit" class="btn-send">ENVOYER</button>
   </form>
 </section>
 
-  
-<section class="location" id="contact">
+<section class="location" id="location">
   <h2>📍 NOUS TROUVER</h2>
-
   <p class="address">
     224 rue Gombette<br>
     01330 Ambérieux-en-Dombes
@@ -308,22 +105,16 @@
     <div class="map-marker">
       <a
         href="https://www.google.com/maps/dir/?api=1&destination=224+rue+Gombette+01330+Amb%C3%A9rieux-en-Dombes"
-        target="_blank"
-        aria-label="Itinéraire vers XP Performance"
-      >
+        target="_blank">
         <img src="assets/images/logo-xp-marker.png" alt="XP Performance">
       </a>
     </div>
   </div>
-
-  <p style="margin-top:15px; font-size:0.9rem;">
-    Cliquez sur le logo pour lancer l’itinéraire Google Maps
-  </p>
 </section>
 
-  <footer>
-    © 2026 XP PERFORMANCE – Reprogrammation moteur haute performance
-  </footer>
+<footer>
+  © 2026 XP PERFORMANCE – Reprogrammation moteur haute performance
+</footer>
 
 </body>
 </html>
