@@ -221,6 +221,76 @@
   </form>
 </section>
 
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+
+  <form
+    class="contact-form"
+    action="https://formsubmit.co/TON_EMAIL_ICI"
+    method="POST"
+  >
+
+    <!-- Options FormSubmit -->
+    <input type="hidden" name="_next" value="https://xpperformance.fr/merci.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="form-grid">
+
+      <div class="field">
+        <input
+          type="text"
+          name="name"
+          placeholder="Nom / Prénom"
+          required
+        >
+      </div>
+
+      <div class="field">
+        <input
+          type="email"
+          name="email"
+          placeholder="Adresse email"
+          required
+        >
+      </div>
+
+      <!-- 📞 Téléphone -->
+      <div class="field">
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Numéro de téléphone"
+          inputmode="tel"
+        >
+      </div>
+
+      <div class="field full">
+        <input
+          type="text"
+          name="vehicle"
+          placeholder="Véhicule (marque / modèle)"
+        >
+      </div>
+
+      <div class="field full">
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Votre demande..."
+          required
+        ></textarea>
+      </div>
+
+    </div>
+
+    <button type="submit" class="btn-send">
+      ENVOYER
+    </button>
+
+  </form>
+</section>
+
+  
 <section class="location" id="contact">
   <h2>📍 NOUS TROUVER</h2>
 
