@@ -23,6 +23,17 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(255,255,255,0.06), transparent 60%),
+    radial-gradient(900px 500px at 85% 20%, rgba(225,6,0,0.05), transparent 65%),
+    linear-gradient(180deg, #0b0b0b 0%, #050505 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 /* ===============================
    HEADER
 ================================ */
@@ -36,9 +47,26 @@
 
 /* LOGO */
 .header .logo {
-  height: 130px;        /* 🔥 BEAUCOUP PLUS VISIBLE */
+  height: 150px;        /* 🔥 BEAUCOUP PLUS VISIBLE */
   width: auto;
   max-width: 100%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.015) 0px,
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  opacity: 0.22;
 }
 
 /* ===============================
