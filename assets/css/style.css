@@ -35,14 +35,20 @@ body {
    HEADER
 ================================ */
 .header {
+  display: flex;
+  align-items: center;
   padding: 24px 60px;
-  border-bottom: 1px solid rgba(225,6,0,0.6);
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(225, 6, 0, 0.6);
 }
 
-.header img {
-  height: 68px;
+/* LOGO */
+.header .logo {
+  height: 90px; /* 👈 taille idéale desktop */
+  width: auto;
+  max-width: 100%;
+  filter: drop-shadow(0 4px 12px rgba(225, 6, 0, 0.35));
 }
 
 /* ===============================
@@ -280,4 +286,16 @@ body {
     padding: 80px 20px;
   }
 }
+
+@media (max-width: 900px) {
+  .header {
+    padding: 16px 20px;
+    justify-content: center; /* logo bien centré sur mobile */
+  }
+
+  .header .logo {
+    height: 60px; /* logo visible mais pas envahissant */
+  }
+}
+
 
