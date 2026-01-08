@@ -88,7 +88,7 @@ body::before {
 ================================ */
 .hero-image {
   position: relative;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 180px);
   background:
     linear-gradient(
       90deg,
@@ -97,7 +97,7 @@ body::before {
       rgba(0,0,0,0.35) 85%,
       #050505 100%
     ),
-    url("assets/images/virage.png" type="image/png") center / cover no-repeat;
+    url("assets/images/virage.png") center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
