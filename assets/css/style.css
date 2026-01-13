@@ -375,3 +375,49 @@ footer {
     font-size: 1rem;
   }
 }
+
+/* ===============================
+   NAVIGATION PRINCIPALE
+================================ */
+.main-nav {
+  position: fixed;
+  top: 30px;
+  left: 40px;
+  z-index: 999;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--red);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
