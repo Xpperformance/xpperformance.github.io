@@ -14,12 +14,16 @@
 /* ===============================
    SCROLL
 ================================ */
-html {
-  scroll-behavior: smooth;
+/* Desktop */
+.section {
+  scroll-margin-top: 120px;
 }
 
-.section {
-  scroll-margin-top: 160px;
+/* Mobile : menu en bas */
+@media (max-width: 768px) {
+  .section {
+    scroll-margin-top: 40px;
+  }
 }
 
 /* ===============================
@@ -602,4 +606,63 @@ html, body {
   max-height: 400px;
   opacity: 1;
   margin-top: 20px;
+}
+
+/* ===============================
+   BOUTONS CONTACT FLOTTANTS
+================================ */
+
+.floating-contact {
+  position: fixed;
+  bottom: 90px; /* au-dessus du menu mobile */
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.contact-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.8);
+}
+
+/* Bouton appel */
+.contact-btn.phone {
+  background: linear-gradient(180deg, #ff1a1a, #b80000);
+}
+
+/* Bouton WhatsApp */
+.contact-btn.whatsapp {
+  background: linear-gradient(180deg, #25d366, #128c7e);
+}
+
+/* Desktop : on cache */
+@media (min-width: 769px) {
+  .floating-contact {
+    display: none;
+  }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.contact-btn.whatsapp {
+  animation: pulse 3s infinite;
 }
