@@ -81,12 +81,10 @@ body {
 /* Texture très légère */
 body::before {
   content: "";
-  position: absolute; /* ✅ au lieu de fixed */
+  position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-}
-
   background-image:
     repeating-linear-gradient(
       0deg,
@@ -95,7 +93,6 @@ body::before {
       transparent 1px,
       transparent 4px
     );
-
   opacity: 0.25;
 }
 
@@ -103,21 +100,18 @@ body::before {
    HERO IMAGE FULL WIDTH
 ================================ */
 .hero-image {
-  min-height: calc(100vh - 180px);
-  height: auto;
+  height: calc(100vh - 180px);
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   overflow: hidden;
-  background: #050505; /* fond de secours */
+  background: #050505;
 }
 
-.hero-image {
+.hero-image::before {
   content: "";
-  position: relative;
+  position: absolute;
   inset: 0;
-
+  z-index: 0;
   background:
     linear-gradient(
       180deg,
@@ -134,12 +128,8 @@ body::before {
       rgba(5,5,5,0.95) 100%
     ),
     url("assets/images/carbon.png");
-
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
-  z-index: 0;
 }
 
 /* ===============================
@@ -392,6 +382,10 @@ footer {
    MOBILE – VERSION PARFAITE
 ================================ */
 @media (max-width: 768px) {
+  .hero-image {
+    height: calc(100svh - 120px);
+  }
+}
 
   /* ===================
      GLOBAL
