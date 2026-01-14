@@ -152,10 +152,8 @@
 
        <div class="accordion-content">
         <p>
-          La conversion Flex+ associe la compatibilité complète E85 à une optimisation avancée de la cartographie moteur.
-          Le véhicule conserve la possibilité de fonctionner à l’E85, au SP95/SP98 ou avec un mélange des deux carburants, tout en exploitant pleinement le potentiel de l’indice d’octane élevé du Superéthanol.
-          Cette configuration permet un gain sensible en puissance, en couple et en réactivité, offrant une conduite plus dynamique et plus agréable.
-          La Flex+ s’adresse aux conducteurs souhaitant allier économies à la pompe et amélioration des performances, sans compromis sur la fiabilité ni la sécurité moteur.
+          La conversion Flex+ associe la compatibilité complète E85 à une optimisation avancée de la cartographie moteur, permettant d’exploiter pleinement l’indice d’octane élevé du Superéthanol.
+          Cette configuration offre un gain sensible en puissance, en couple et en réactivité, tout en conservant une fiabilité optimale pour un usage quotidien.
           • Conversion E85 + Stage 1 : 750 €  
           • Conversion E85 + Stage 2 : 950 € 
         </p>
@@ -168,12 +166,7 @@
   <!-- Les options de suppression -->
 <section class="section" id="options">
   <h2>Les options de suppression</h2>
-
-  <div class="cards">
-
-<section class="section" id="options">
-  <h2>Options</h2>
-
+  
   <div class="accordion">
 
     <div class="accordion-item">
@@ -321,17 +314,28 @@
 
 <!-- JS cartes interactives -->
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.toggle-card').forEach(card => {
-      card.addEventListener('click', () => {
-        document.querySelectorAll('.toggle-card').forEach(c => {
-          if (c !== card) c.classList.remove('active');
-        });
-        card.classList.toggle('active');
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+
+      document.querySelectorAll('.accordion-item').forEach(i => {
+        if (i !== item) i.classList.remove('active');
       });
+
+      item.classList.toggle('active');
     });
   });
 </script>
-
+    
+<script>
+  document.querySelectorAll('.accordion-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.accordion-item').forEach(i => {
+        if (i !== item) i.classList.remove('active');
+      });
+      item.classList.toggle('active');
+    });
+  });
+</script>
 </body>
 </html>
