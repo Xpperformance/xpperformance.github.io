@@ -414,3 +414,71 @@ footer {
     height: auto;
   }
 }
+/* =====================================
+   HOTFIX VISIBILITÉ SITE
+   (NE CASSE RIEN D'AUTRE)
+===================================== */
+
+/* empêche tout voile noir au-dessus du site */
+body::before,
+body::after {
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+/* garantit que le contenu est visible */
+section,
+header,
+footer,
+.hero,
+.hero-image,
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* menu toujours au-dessus */
+.main-nav {
+  z-index: 1000 !important;
+}
+
+/* corrige le bouton envoyer sans toucher à sa position */
+.contact-form button,
+.contact-form .btn,
+input[type="submit"] {
+  background: #e10600;
+  color: #fff;
+  padding: 16px 48px;
+  border-radius: 40px;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* empêche la map de sortir de son conteneur */
+.map,
+.localisation,
+.map iframe {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
+/* logo map taille stable */
+.map-marker img {
+  width: 55px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 80px;
+  }
+
+  .main-nav {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    background: rgba(0,0,0,0.95);
+  }
+}
