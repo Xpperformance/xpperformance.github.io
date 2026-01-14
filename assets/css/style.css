@@ -19,12 +19,22 @@
   scroll-margin-top: 120px;
 }
 
-/* Mobile : menu en bas */
-@media (max-width: 768px) {
-  .section {
-    scroll-margin-top: 40px;
+/* Desktop uniquement */
+@media (min-width: 769px) {
+  .main-nav {
+    top: 30px;
+    left: 40px;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    background: transparent;
   }
 }
+.main-nav {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
 
 /* ===============================
    RESET
