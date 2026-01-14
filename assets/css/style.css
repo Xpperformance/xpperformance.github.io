@@ -64,8 +64,8 @@ footer {
 }
 
 .section {
-  padding: 110px 60px;
-  scroll-margin-top: 120px;
+  padding: 90px 60px;
+  scroll-margin-top: 110px;
 }
 
 .section h2 {
@@ -344,3 +344,22 @@ footer {
   height: 420px;
   margin: 40px auto 0;
 }
+
+/* ===============================
+   AJUSTEMENT SECTIONS ANCRÉES
+================================ */
+
+/* OPTIONS */
+#options {
+  padding-top: 70px;
+}
+
+/* NOUS TROUVER */
+#nous-trouver {
+  padding-top: 60px;
+}
+
+#nous-trouver h2 {
+  margin-bottom: 24px;
+}
+
